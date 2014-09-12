@@ -14,3 +14,27 @@ In order to install this on your own system you will have do to the following:
     $ rvm rvmrc warning ignore `pwd`/.rvmrc
     $ bundle install
     $ rake db:create
+
+## Secret
+
+You will also need to create the secrets file. To generate the secret token run the following command:
+
+    $ rake secret
+    2ad688adc10...dab4c
+    
+Create the secrets file using the secret token generated above:
+
+    $ cat config/secrets.yml
+    development:
+        secret_key_base: 2ad688adc10...dab4c
+ 
+    test:
+        secret_key_base: 2ad688adc10...dab4c
+ 
+    production:
+        secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
+
+You should now be able to run the applications by running the following command:
+
+    $ rails s
+    
