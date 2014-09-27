@@ -16,4 +16,4 @@ App.LeadEditController = Ember.ObjectController.extend({
 
   }
 
-});
+})

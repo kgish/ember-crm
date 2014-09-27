@@ -8,15 +8,15 @@ App.Lead = DS.Model.extend({
 
   fullName: function() {
     return this.get('firstName') + ' ' + this.get('lastName')
-  }.property('firstName', 'lastName')
+  }.property('firstName', 'lastName'),
 
-});
+})
 
 App.Lead.reopenClass({
   STATUSES: ['new', 'in progress', 'closed', 'bad'],
 
   valid: function(fields) {
-    return fields.firstName && fields.lastName;
+    return fields.firstName && fields.lastName
   }
 
 });

@@ -5,4 +5,4 @@ App.LeadsNewRoute = Ember.Route.extend({
     controller.set('showError', false)
   }
 
-});
+})
